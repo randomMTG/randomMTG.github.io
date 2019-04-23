@@ -1,8 +1,7 @@
-const url = 'https://api.scryfall.com/cards/random?format=image&version=art_crop';
-
-jQuery(document).ready(
+jQuery(document).ready( function(){
+	const url = 'https://api.scryfall.com/cards/random?format=image&version=art_crop';
 	$.get(url,function(data,status){
 		console.log(`${data}`)
 		// console.log(`${status}`)
 	});
-);
+});
