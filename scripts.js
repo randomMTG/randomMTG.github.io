@@ -10,6 +10,8 @@ jQuery(document).ready( function(){
 	};
 
 	$.post(url, {}, function(response, status, request) {
+		console.log(response.redirectUrl);
+		console.log(request.responseText);
 		if (status == STATUS.REDIRECT) {
 			// you need to return the redirect url
 			console.log(response.redirectUrl);
