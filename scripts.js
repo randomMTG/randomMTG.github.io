@@ -12,7 +12,7 @@ jQuery(document).ready( function(){
 	$.post('/redirected', {}, function(response, status, request) {
 		if (status == STATUS.REDIRECT) {
 			// you need to return the redirect url
-			location.href = response.redirectUrl;
+			console.log(response.redirectUrl);
 		} else {
 			$('#content').html(request.responseText);
 		}
@@ -23,6 +23,7 @@ jQuery(document).ready( function(){
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			console.log(this.responseText);
+			console.log(this.redirectUrl);
 		}
 	};
 
