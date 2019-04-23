@@ -23,12 +23,12 @@ jQuery(document).ready( function(){
 		type: 'get',
 		xhr: function() {
 			return xhr;
-		}
+		},
 		success: function () {
 			console.log(xhr.responseURL);
 		}
 	});
-	
+
 
 
 });
