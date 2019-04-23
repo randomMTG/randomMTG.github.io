@@ -4,4 +4,32 @@ jQuery(document).ready( function(){
 		console.log(`${data}`)
 		// console.log(`${status}`)
 	});
+
+	var STATUS = {
+		REDIRECT: 280
+	};
+
+	$.post('/redirected', {}, function(response, status, request) {
+		if (status == STATUS.REDIRECT) {
+			// you need to return the redirect url
+			location.href = response.redirectUrl;
+		} else {
+			$('#content').html(request.responseText);
+		}
+	});
+
+	var xhttp = new XMLHttpRequest();
+
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			console.log(this.responseText);
+		}
+	};
+
+	xhttp.open("GET", url, true);
+	xhttp.send();
+
+	// xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	// xhttp.send("fname=Henry&lname=Ford");
+
 });
