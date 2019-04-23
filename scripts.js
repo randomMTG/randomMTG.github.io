@@ -10,7 +10,7 @@ jQuery(document).ready( function(){
 	};
 
 	$.get(url, function(data, status, dataType) {
-		console.log(${data});
+		console.log(data);
 		console.log(`${status}`);
 		console.log(`${dataType}`);
 		// $("#mtg").attr('src',${data});
