@@ -13,7 +13,4 @@ jQuery(document).ready( function(){
 			$("#mtg").attr('src',xhr.responseURL);
 		}
 	});
-
-
-
 });
