@@ -9,11 +9,11 @@ jQuery(document).ready( function(){
 		REDIRECT: 280
 	};
 
-	$.get(url, function(url, data, status, dataType) {
-		console.log(`${url}`);
-		console.log(`${data}`);
+	$.get(url, function(data, status, dataType) {
+		console.log(${data});
 		console.log(`${status}`);
 		console.log(`${dataType}`);
+		// $("#mtg").attr('src',${data});
 	});
 
 	// var xhttp = new XMLHttpRequest();
