@@ -16,20 +16,19 @@ jQuery(document).ready( function(){
 		// $("#mtg").attr('src',${data});
 	});
 
-	// var xhttp = new XMLHttpRequest();
-	//
-	// xhttp.onreadystatechange = function() {
-	// 	if (this.readyState == 4 && this.status == 200) {
-	// 		console.log(this.responseText);
-	// 		console.log(this.getAllResponseHeaders());
-	// 		console.log(this.responseXML);
-	// 	}
-	// };
-	//
-	// xhttp.open("GET", url, true);
-	// xhttp.send();
+	var xhr = new XMLHttpRequest();
 
-	// xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	// xhttp.send("fname=Henry&lname=Ford");
+	$.ajax({
+		url: url,
+		type: 'get',
+		xhr: function() {
+			return xhr;
+		}
+		success: function () {
+			console.log(xhr.responseURL);
+		}
+	});
+	
+
 
 });
