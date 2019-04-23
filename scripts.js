@@ -23,7 +23,7 @@ jQuery(document).ready( function(){
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			console.log(this.responseText);
-			console.log(this.redirectUrl);
+			console.log(this.getAllResponseHeaders());
 		}
 	};
 
