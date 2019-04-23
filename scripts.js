@@ -9,15 +9,11 @@ jQuery(document).ready( function(){
 		REDIRECT: 280
 	};
 
-	$.post(url, {}, function(response, status, request) {
-		console.log(response.redirectUrl);
-		console.log(request.responseText);
-		if (status == STATUS.REDIRECT) {
-			// you need to return the redirect url
-			console.log(response.redirectUrl);
-		} else {
-			console.log(request.responseText);
-		}
+	$.get(url, function(url, data, status, dataType) {
+		console.log(`${url}`);
+		console.log(`${data}`);
+		console.log(`${status}`);
+		console.log(`${dataType}`);
 	});
 
 	// var xhttp = new XMLHttpRequest();
