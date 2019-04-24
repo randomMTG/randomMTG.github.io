@@ -1,12 +1,17 @@
 html,
 body {
-  height: 100%;
-  background-image: url("bg.png");
+    height: 100%;
+    background-image: url("bg.png");
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
-  max-height: 100%;
-  max-width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
 }
