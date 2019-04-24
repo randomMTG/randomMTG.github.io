@@ -4,21 +4,8 @@ jQuery(document).ready( function(){
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
 	xhr.onload = function () {
-		console.log(xhr.responseURL); // http://example.com/test
+		console.log(xhr.responseURL);
 		$("#mtg").attr('src',xhr.responseURL);
 	};
 	xhr.send(null);
-
-	// var xhr = new XMLHttpRequest();
-	// $.ajax({
-	// 	url: url,
-	// 	type: 'get',
-	// 	xhr: function() {
-	// 		return xhr;
-	// 	},
-	// 	success: function () {
-	// 		console.log(xhr.responseURL);
-	// 		$("#mtg").attr('src',xhr.responseURL);
-	// 	}
-	// });
 });

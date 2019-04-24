@@ -1,9 +1,9 @@
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-	margin-bottom: 5px;  /*Margin bottom by footer height */
-  background-image: url("bg.png");
+    margin-bottom: 5px;  /*Margin bottom by footer height */
+    background-image: url("bg.png");
 }
