@@ -5,6 +5,7 @@ jQuery(document).ready( function(){
 	xhr.open('GET', url, true);
 	xhr.onload = function () {
 		console.log(xhr.responseURL); // http://example.com/test
+		$("#mtg").attr('src',xhr.responseURL);
 	};
 	xhr.send(null);
 
