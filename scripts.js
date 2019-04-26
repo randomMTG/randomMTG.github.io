@@ -7,7 +7,7 @@ jQuery(document).ready( function(){
 	newMTG();
 
 	// Image on click
-	$("#mtg").click( newMTG() );
+	$("#mtg").click( newMTG );
 });
 
 function newMTG(){
