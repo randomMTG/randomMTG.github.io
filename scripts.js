@@ -8,4 +8,9 @@ jQuery(document).ready( function(){
 		$("#mtg").attr('src',xhr.responseURL);
 	};
 	xhr.send(null);
+
+	$("#mtg").click( function(){
+		$("#mtg").attr('src',"pacman.gif");
+		xhr.open('GET', url, true);
+	});
 });
