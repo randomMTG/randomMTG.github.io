@@ -30,7 +30,7 @@ jQuery(document).ready( function(){
 				$("#mtg").click = null;
 				xhr.onreadystatechange = function() {
 					if(xhr.readyState==4){
-						$("#mtg").attr('src',load);
+						$("#mtg").attr('src',xhr.responseURL);
 						$("#mtg").click = tmp;
 						xhr.onreadystatechange = null;
 						newMTG();
