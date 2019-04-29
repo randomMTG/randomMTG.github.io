@@ -10,13 +10,14 @@ jQuery(document).ready( function(){
 	xhr.onload = function () {
 		console.log(xhr.responseURL);
 		$("#mtg").attr('src',xhr.responseURL);
+
 		// Load next image before click to avoid waiting
 		newMTG();
 
 		// Image on click - available after loading first image
 		$("#mtg").click( function(){
 
-			if(xhr.readyState==4){
+			if(xhr.readyState==4 && load != ""){
 				// If loaded, present and load another
 				$("#mtg").attr('src',load);
 				newMTG();
