@@ -17,6 +17,8 @@ jQuery(document).ready( function(){
 		// Image on click - available after loading first image
 		$("#mtg").click( function(){
 
+			console.log(xhr.readyState);
+
 			if(xhr.readyState==4 && load != ""){
 				// If loaded, present and load another
 				$("#mtg").attr('src',load);
