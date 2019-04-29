@@ -32,6 +32,7 @@ jQuery(document).ready( function(){
 					$("#mtg").attr('src',load);
 					newMTG();
 					$("#mtg").click = tmp;
+					xhr.onreadystatechange = null;
 				}
 			};
 		}
