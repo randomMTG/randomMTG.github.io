@@ -10,11 +10,10 @@ jQuery(document).ready( function(){
 	xhr.onload = function () {
 		console.log(xhr.responseURL);
 		$("#mtg").attr('src',xhr.responseURL);
+		// Load next image before click to avoid waiting
+		newMTG();
 	};
 	xhr.send(null);
-
-	// Load next image before click to avoid waiting
-	newMTG();
 
 	// Image on click
 	$("#mtg").click( function(){
