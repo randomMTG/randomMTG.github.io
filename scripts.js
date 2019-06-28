@@ -1,7 +1,9 @@
 const url = 'https://api.scryfall.com/cards/random?format=image&version=art_crop';
 var xhr = new XMLHttpRequest();
 var load = "";
-var tmp = null;	// Variable to hold click event
+var tmp = null;				// Variable to hold click event
+var im = new Image(); 		// Image object to preload image
+im.src = "pacman.gif";
 
 jQuery(document).ready( function(){
 
@@ -50,6 +52,7 @@ function newMTG(){
 	xhr.onload = function () {
 		console.log(xhr.responseURL);
 		load = xhr.responseURL;
+		im.src = load;
 	};
 	xhr.send(null);
 }
