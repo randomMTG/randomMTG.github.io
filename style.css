@@ -1,17 +1,20 @@
 html,
-body {
+body
+{
     height: 100%;
-    background-image: url("bg.png");
+    width: 100;
 }
 
 body {
-    display: -ms-flexbox;
     display: flex;
-    max-height: 100%;
-    max-width: 100%;
+    justify-content: center;            /* Align along flex direction (row) */
+    align-items: center;                /* Align along perpendicular direction (column) */
+    background-image: url("bg.png");
 }
 
 img {
     max-height: 100%;
     max-width: 100%;
+    width: auto;
+    height: auto;
 }
