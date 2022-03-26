@@ -10,7 +10,7 @@ const img_el = document.querySelector("#mtg");
 xhr.open("GET", url, true);
 xhr.onload = function () {
     console.log(xhr.responseURL);
-    img_el.attr("src", xhr.responseURL);
+    img_el.src = xhr.responseURL;
 
     // Load next image before click to avoid waiting
     newMTG();
@@ -21,16 +21,16 @@ xhr.onload = function () {
 
         if (xhr.readyState == 4 && load != "") {
             // If loaded, present and load another
-            img_el.attr("src", load);
+            img_el.src = load;
             newMTG();
         } else {
             // Else wait for loading, present and load another
-            img_el.attr("src", "images/pacman.gif"); // Loading GIF
+            img_el.src = "images/pacman.gif"; // Loading GIF
             tmp = img_el.onclick;
             img_el.onclick = null;
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4) {
-                    img_el.attr("src", xhr.responseURL);
+                    img_el.src = xhr.responseURL;
                     img_el.onclick = tmp;
                     xhr.onreadystatechange = null;
                     newMTG();
