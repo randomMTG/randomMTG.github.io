@@ -3,7 +3,7 @@ let xhr = new XMLHttpRequest();
 let load = "";
 let tmp = null; // Variable to hold click event
 let im = new Image(); // Image object to preload image
-im.src = "pacman.gif";
+im.src = "images/pacman.gif";
 const img_el = document.querySelector("#mtg");
 
 // Request random MTG
@@ -25,7 +25,7 @@ xhr.onload = function () {
             newMTG();
         } else {
             // Else wait for loading, present and load another
-            img_el.attr("src", "pacman.gif"); // Loading GIF
+            img_el.attr("src", "images/pacman.gif"); // Loading GIF
             tmp = img_el.onclick;
             img_el.onclick = null;
             xhr.onreadystatechange = function () {
