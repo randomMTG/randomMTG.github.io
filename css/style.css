@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;            /* Align along flex direction (row) */
     align-items: center;                /* Align along perpendicular direction (column) */
-    background-image: url("bg.png");
+    background-image: url("images/bg.png");
 }
 
 img {
